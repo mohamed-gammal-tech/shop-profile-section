@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nav-section {
+    text-align: center;
+    margin: 20px;
+    position: relative; 
+  }
+  .nav-section::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 80%; /* Adjust the width as needed */
+    background: #d0d0d0; /* This is a light gray color */
+    position: absolute;
+    left: 10%; /* This centers the line if width is 80% */
+    bottom: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav-link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+    position: absolute;
+  bottom: -1px; /* Adjust this value to position the underline */
+  left: 0;
+  }
+  
+
+  .active:after {
+    width: 100%;
+    z-index: 3;
+    background: navy;
+  }
+  
